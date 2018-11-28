@@ -35,17 +35,17 @@ router.post("/", function(req, res){
                     payment.save();
                     member.payments.push(payment);
                     member.save();
-                    console.log(totalBalance());
+                    // console.log(totalBalance());
                     
                     res.redirect("" + member._id);
 
                                         // Get the payment from user, sum it  and return it to as the totalBalance
-                     function totalBalance(){
-                        var balance = 0 + req.body.payment;
-                        balance = parseInt(req.body.payment.amount += balance);
-                        return balance
+                    //  function totalBalance(){
+                    //     var balance = 0 + req.body.payment;
+                    //     balance = parseInt(req.body.payment.amount += balance);
+                    //     return balance
 
-                    };      
+                    // };      
                     
                     
                                     }
@@ -55,12 +55,12 @@ router.post("/", function(req, res){
         }
     });
 });
-Payments.aggregate({
-    $payment: {
-        totalBalance:
+// Payments.aggregate({
+//     $payment: {
+//         totalBalance:
 
-    }
-})
+//     }
+// })
 
 
 
