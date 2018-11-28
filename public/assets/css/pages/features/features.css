@@ -1,0 +1,114 @@
+.features-header {
+    /* background-color: #3083aa;  */
+    background-color: rgb(56, 78, 119);
+    color: #fff;
+}
+.features-header-box {
+    margin-top: 7rem;
+}
+.features-header-text {
+    font-size: 3.5rem;
+}
+.features-header-image img {
+    width: 80%;
+    margin-top: 6rem;
+}
+.cm-text-header {
+    padding-top: 10rem;
+}
+.cm-header-text {
+    padding: 8rem 2rem;
+}
+@media (max-width: 1130px) {
+    .features-header-image img {
+        margin-top: 4rem;
+        width: 90%;
+    }
+    .features-header-box {
+        margin-bottom: 5rem;
+    }
+}
+@media (max-width: 770px) {
+    .features-header-image {
+        display: none;
+    }
+    .features-header-box {
+        margin-top: 6rem;
+    }
+    .h-main-text, .p-main-text {
+        width: 95% !important;
+    }
+
+}
+
+.features-section {
+    border-bottom: 1px solid #eff1f2;
+}
+.section-content {
+    padding: 6rem 2rem 2rem 3rem;
+    font-size: 2rem;
+}
+.section-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+.list {
+    margin-top: 2rem;
+}
+.list-icon {
+    font-size: 3rem;
+}
+.list i {
+    background-color: #3083aa;
+    color: #fff;
+    padding: .6rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+.list i:hover {
+    background-color: transparent;
+    color: #3083aa;
+    border: .1 solid #3083aa;
+}
+.list-item {
+    margin-bottom: 3rem;
+}
+.list a, .all-features a {
+    text-transform: initial;
+    color: #3083aa;
+}
+.section-image {
+    padding-top: 4rem;
+}
+.all-features {
+    padding: 8rem 2rem;
+}
+.all-features h3 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+.all-features li {
+    list-style: none;
+    font-size: 2.5rem;
+}
+.main-cta .col-md-6 {
+    padding: 4rem 2rem 3rem 4rem;
+    text-align: center;
+    color: #fff;
+}
+.main-cta p {
+    margin-bottom: 2rem;
+}
+.main-cta a:last-child {
+    color: #fff;
+    padding-left: 2rem;
+}
+.main-cta .col-md-6 a {
+    text-transform: capitalize;
+}
+.main-cta-trial {
+    background-color: #3083aa;
+}
+.main-cta-demo {
+    background-color: #136b94;
+}

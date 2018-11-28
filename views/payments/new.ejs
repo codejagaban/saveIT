@@ -1,0 +1,77 @@
+
+<% include ../partials/header %>
+
+<% include ../partials/dashboard %>
+
+
+
+<div class="m-content">
+<div class="row justify-content-center">
+    
+<div class="col-md-5">
+    <!--begin::Portlet-->
+    <div class="m-portlet__head topheader text-center">
+    <h4 class="bg-primary text-white p-3 mb-0">Add Savings</h4>
+   </div>
+    <div class="m-portlet m-portlet--tab">
+     
+        <!--begin::Form-->
+        <form action="/members/<%=member._id%>" method="POST" class="m-form m-form--fit">
+            <div class="m-portlet__body" style="padding-top: 0px;">
+                
+                
+                <div class="form-group m-form__group row justify-content-center">
+                
+               
+                 <input class="form-control m-input--solid mt-3" placeholder="Amount" type="text" name="payment[amount]">
+                 
+                 <input class="form-control m-input--solid mt-3" value="0" type="text" name="payment[balance]">
+                        
+                        <select class="form-control m-select2--solid m-input--solid mt-3 p-2" name="payment[depositType]">
+                        <option>Cash</option>
+                        <option>Cheque</option>
+                        <option>Bank Deposit</option>
+                        <option>Transfer</option>
+                            
+                        </select>
+
+
+                        <button type="submit" class="btn mt-3  float-right btn-primary">
+                        Submit
+                    </button>
+    
+           
+
+
+                    </div>
+
+                 
+                </div>
+
+                
+                      
+
+            </div>
+         
+        </form>
+        <!--end::Form-->
+    </div>
+    <!--end::Portlet-->
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end:: Body -->
+
+
+
+
+
+
+
+
+<% include ../partials/copyright %>
+
+<% include ../partials/footer %>

@@ -1,0 +1,46 @@
+body {
+   
+}
+.centered {
+    margin: 0 auto;
+}
+
+.m-portlet.m-portlet--tab, .topheader {
+    width: 80%;
+    float: right;
+}
+.m-aside-left.m-aside-left--skin-dark {
+    height: 100vh;
+}
+.inline {
+    display: inline;
+}
+/* 
+
+<a href="/members/new" class="">Add a new member <i class="glyphicon glyphicon-plus"></i></a>
+
+<div class="row">
+  
+<% members.forEach(function(member){%>
+    <div class="col-md-4">
+
+        <div class="card" style="">
+            <div class="card-body">
+                
+                <h4 class="card-title"><%= member.firstName + " " + member.lastName%> </h4>
+                    <p class="card-text"><small>Joined <%= member.dateJoined.toDateString()%></small>
+                    <div><%= member.address%></div></p>
+                        <a href="#" class="btn btn-primary">View Profile</a>
+                            <a href="#" class="btn btn-dark float-right">View transaction Details</a>
+
+
+                            
+            </div>
+        </div>
+    </div>
+    <%});%>
+
+
+
+ 
+</div> */

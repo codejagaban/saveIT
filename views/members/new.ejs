@@ -1,0 +1,82 @@
+
+<% include ../partials/header %>
+
+<% include ../partials/dashboard %>
+
+
+            <div class="m-content">
+                <div class="row justify-content-center">
+                    
+                <div class="col-md-10">
+                    <!--begin::Portlet-->
+                    <div class="m-portlet m-portlet--tab">
+                        <div class="m-portlet__head">
+                            <div class="m-portlet__head-caption text-center">
+                                <div class="m-portlet__head-title">
+                                    <span class="m-portlet__head-icon m--hide">
+                                        <i class="la la-gear"></i>
+                                    </span>
+                                    <h4 class="m-portlet__head-text ">
+                                     Add New Member
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!--begin::Form-->
+                        <form action="/members" method="POST" class="m-form m-form--fit m-form--label-align-right">
+                            <div class="m-portlet__body" style="padding-top: 0px;">
+                                
+                                
+                                <div class="form-group m-form__group row">
+                                
+                                    <div class="col-md-6">
+                                        <input class="form-control m-input--solid" placeholder="Firstname" type="text" name="member[firstName]">
+                                        <input class="form-control m-input--solid mt-3" placeholder="Lastname" type="text" name="member[lastName]">
+                                        <input type="text" class="form-control mt-3 m-input--solid" name="member[dateOfBirth]"  placeholder="Date Of Birth" id="m_datepicker_2"/>
+                                        
+                                <input class="form-control m-input--solid mt-3" placeholder="Address" type="text" name="member[address]">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                    <input class="form-control m-input--solid" placeholder="Email Address" type="email" name="member[email]">
+                                    <input class="form-control m-input--solid mt-3" placeholder="Occupation" type="text" name="member[occupation]">
+                                    <input class="form-control m-input--solid mt-3" min="0" placeholder="Phone Number" type="number" name="member[phoneNum]">
+                               
+                                    <button type="submit" class="btn mt-3 btn-block btn-primary">
+                        Submit
+                    </button>
+                                   </div>
+                                </div>
+
+                                
+                                      
+
+                        <div class="m-portlet__foot m-portlet__foot--fit text-center">
+                        <div class="m-form__actions row justify-content-center">
+                        <div class="col-6">
+                            
+                       
+                    <a href="/members">Go back</a>
+                            
+                        </div>
+                    
+                          
+                        </div>
+                    </div>
+                            </div>
+                         
+                        </form>
+                        <!--end::Form-->
+                    </div>
+                    <!--end::Portlet-->
+
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+    <!-- end:: Body -->
+
+
+<% include ../partials/copyright %>
+<% include ../partials/footer %>

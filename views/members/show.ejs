@@ -1,0 +1,141 @@
+
+<% include ../partials/header %>
+<% include ../partials/dashboard %>
+
+
+            
+        
+            <div class="m-content">
+                <div class="row justify-content-center">
+                    
+                <div class="col-md-12">
+              <!--begin::Portlet-->
+								<div class="m-portlet m-portlet--tab m-portlet--tabs">
+                                <div class="m-portlet__head">
+                                    <div class="m-portlet__head-tools">
+                                        <ul class="nav nav-tabs m-tabs-line m-tabs-line--primary m-tabs-line--2x" role="tablist">
+                                            <li class="nav-item m-tabs__item">
+                                                <a class="nav-link m-tabs__link active" data-toggle="tab" href="#profile" role="tab">
+                                                    <i class="la la-user"></i>
+                                                    Profile
+                                                </a>
+                                            </li>
+                                            <li class="nav-item m-tabs__item">
+                                                <a class="nav-link m-tabs__link" data-toggle="tab" href="#savings" role="tab">
+                                                    <i class="la la-briefcase"></i>
+                                                    Savings History
+                                                </a>
+                                            </li>
+                                            <li class="nav-item m-tabs__item">
+                                                <a class="nav-link m-tabs__link" data-toggle="tab" href="#loans" role="tab">
+                                                   
+                                            <i class=" icon flaticon-coins"></i>
+                                                   Loans History
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="m-portlet__body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="profile" role="tabpanel">
+                                        <a href="/members/<%=member._id%>/edit" class="btn btn-outline-primary float-right">Edit Profile</a>
+
+                                        <div class="row">
+                                        <div class="col-md-5">
+                                        
+                                        <h6 class="bg-info p-2 text-white">Basic Info</h6>
+                                        <p><h6 class="inline">Fullname: </h6><%=member.firstName + " " + member.lastName%></p>
+                                        
+                                        <p><h6 class="inline">Date Of Birth: </h6><%=member.dateOfBirth%></p>
+                                        
+                                        <p><h6 class="inline">Occupation : </h6><%=member.occupation%></p>
+
+
+                                       
+                                            
+                                        </div>
+
+                                        <div class="col-md-5">
+                                        <h6 class="bg-info p-2 text-white">Contact Info</h6>
+                                        <p><h6 class="inline"> Email Address: </h6><%=member.email%></p>
+                                        <p><h6 class="inline"> Phone Number: </h6><%=member.phoneNum%></p>
+                                        <p><h6 class="inline"> Home Address: </h6><%=member.address%></p>
+                                      
+                                       
+                                       
+                                        
+                                            
+                                        </div>
+                                            
+                                        </div>
+
+                                       
+                                        </div>
+                                        <div class="tab-pane" id="savings" role="tabpanel">
+                                           
+                                <a href="/members/<%=member._id%>/payments/new" class="btn btn-outline-primary float-right">Add a new Saving</a>
+                                <table class="table table-striped m-table">
+                                    <thead>
+                                        <tr>
+                                        <th>Amount</th>
+                                            <th> Savings Date </th>
+                                            <th>Payment Type</th>
+                                            <th>Balance</th>
+                                           
+                                        </tr>
+
+
+                                    </thead>
+
+
+                                    <tbody> 
+                                    <%member.payments.forEach(function(payment){%>
+                                    <tr>  
+                                    <td><%=payment.amount%></td>
+                                            <td><%=payment.date.toDateString()%> </td>
+
+                                            
+                                            <td><%=payment.depositType%></td>
+
+                                            <td>
+                                      
+                                         
+                                            </td>
+                                          
+                                           
+                                        </tr>
+                                        <%});%>  
+
+                                    
+                                    </tbody>
+                                </table> </div>
+                                        <div class="tab-pane" id="loans" role="tabpanel">
+                                        <a href="/members/<%=member._id%>/loans/new" class="btn btn-outline-primary float-right">Add a new Loan</a>
+                              
+
+
+                                       </div>
+                                    </div>
+                                    
+                                    <a href="/members" class="btn btn-outline-accent">Back to all members</a>
+                                </div>
+                            </div>
+                            <!--end::Portlet-->
+                    <!--end::Portlet-->
+
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+    <!-- end:: Body -->
+
+
+
+
+
+
+<% include ../partials/copyright %>
+
+<% include ../partials/footer %>

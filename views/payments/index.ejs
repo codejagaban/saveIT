@@ -1,0 +1,79 @@
+
+<% include ../partials/header %>
+<% include ../partials/dashboard %>
+            
+            
+            
+            <div class="m-content">
+                <div class="row justify-content-center">
+                    
+                <div class="col-md-12">
+              <!--begin::Portlet-->
+						<div class="m-portlet m-portlet--tab">
+                        <div class="m-portlet__head">
+                            <div class="m-portlet__head-caption">
+                                <div class="m-portlet__head-title">
+                                    <h3 class="m-portlet__head-text">
+                                    All Savings
+                                    </h3>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="m-portlet__body">
+                            <!--begin::Section-->
+                            <div class="m-section">
+                                <div class="m-section__content">
+                                
+                                <a href="/members/<%=member._id%>/savings/new" class="btn btn-primary float-right">Add a new Saving</a>
+                                    <table class="table table-striped m-table">
+                                        <thead>
+                                            <tr>
+                                               
+                                                <th>Full Name</th>
+                                                <th> Savings Date </th>
+                                                <th>Payment Type</th>
+                                                <th>Amount</th>
+                                            </tr>
+
+
+                                        </thead>
+
+
+                                        <tbody> 
+
+                                        <%savings.forEach(function(saving){%>
+                                        <tr>  
+             <th scope="row" ><span class="bg-primary text-white round text-center"></span><%=saving.accountName%></th>
+                                                <td><%=saving.savingDate.toDateString()%> </td>
+
+                                                
+                                                <td><%=saving.savingDepositType%></td>
+                                              
+                                                <td><%=saving.savingAmount%></td>
+                                            </tr>
+                                            <%});%>  
+
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--end::Section-->
+                        </div>
+                        <!--end::Form-->
+                    </div>
+                    <!--end::Portlet-->
+
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+    <!-- end:: Body -->
+
+
+
+    <% include ../partials/copyright %>
+<% include ../partials/footer %>

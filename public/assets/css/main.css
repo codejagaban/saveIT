@@ -1,0 +1,30 @@
+/* import all css files */
+
+
+/* base folder */
+@import "base/animations.css";
+@import "base/base.css";
+@import "base/typography.css";
+
+/* components folder */
+@import "components/buttons.css";
+@import "components/feature-box.css";
+
+/* layouts folder */
+@import "layouts/footer.css";
+@import "layouts/navbar.css";
+@import "layouts/navigation.css";
+
+
+/* pages folder */
+@import "pages/about.css";
+@import "pages/contact.css";
+@import "pages/faq.css";
+@import "pages/pricing.css";
+@import "pages/section.css";
+
+/* pages/features folder */
+@import "pages/features/features.css";
+
+/* pages/home folder */
+@import "pages/home/header.css";
