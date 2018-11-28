@@ -10,7 +10,7 @@ app = express();
 
 // MONGOOSE CONFIG
 app.use(bodyParser.urlencoded({extended: true}));
-mongoose.connect("mongodb://localhost/saveIT");
+mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds119374.mlab.com:19374/saveit");
 app.use(methodOverride("_method"));
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
