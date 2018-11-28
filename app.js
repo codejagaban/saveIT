@@ -38,7 +38,7 @@ app.use("/members/:id", paymentRoute);
 
 
 // SERVER SET UP
-app.listen(3200, function(){
+app.listen(process.env.PORT || 3200, function(){
     console.log("saveIT app started at localhost:3200");
     
 });
