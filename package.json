@@ -4,7 +4,8 @@
   "description": "A micro finance software",
   "main": "app.js",
   "scripts": {
-    "test": "1"
+    "test": "1",
+    "start": "node app.js"
   },
   "author": "codekyd",
   "license": "ISC",
