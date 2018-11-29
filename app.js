@@ -1,20 +1,46 @@
 
 // GLOBAL CONFIG
-const  methodOverride = require("method-override");
+const passportLocalMongoose = require("passport-local-mongoose");
+const LocalStrategy = require("passport-local");
+const methodOverride = require("method-override");
 const bodyParser = require("body-parser");
 const Member = require("./models/member")
-const Savings = require("./models/payment");
+const Payments = require("./models/payment");
+const User = require("./models/user");
 const mongoose = require("mongoose");
 const express = require("express");
+const passport = require("passport");
 const app = express();
 
 // MONGOOSE CONFIG
-const DB_URL = process.env.DB_URL;
+// const DB_URL = process.env.DB_URL;
 app.use(bodyParser.urlencoded({extended: true}));
-mongoose.connect(DB_URL);
+// mongoose.connect(DB_URL);
+mongoose.connect("mongodb://localhost/saveIT");
 app.use(methodOverride("_method"));
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
+
+
+// PASSPORT CONFIG
+app.use(require("express-session")({
+    secret : "The Web App",
+    resave: false,
+    saveUninitialized: false,
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+
+app.use(function(req, res, next){
+    res.locals.currentUser = req.user;
+    next();
+});
+
 
 
 
