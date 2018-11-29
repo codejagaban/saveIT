@@ -1,16 +1,17 @@
 
 // GLOBAL CONFIG
-var methodOverride = require("method-override"),
-bodyParser = require("body-parser"),
-Member = require("./models/member"),
-Savings = require("./models/payment"),
+const  methodOverride = require("method-override");
+const bodyParser = require("body-parser");
+const Member = require("./models/member"),
+const Savings = require("./models/payment"),
 mongoose = require("mongoose"),
 express = require("express"),
 app = express();
 
 // MONGOOSE CONFIG
+const DB_URL = process.env.DB_URL;
 app.use(bodyParser.urlencoded({extended: true}));
-mongoose.connect("mongodb://codekyd:bubblegum1@ds119374.mlab.com:19374/saveit");
+mongoose.connect(DB_URL);
 app.use(methodOverride("_method"));
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
