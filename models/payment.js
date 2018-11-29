@@ -1,11 +1,10 @@
 var mongoose = require("mongoose");
 var paymentSchema = new mongoose.Schema({
-    amount: String,
+    amount: Number,
     depositType: String,
     date:{type: Date, default: Date.now},
-    balance: String,
+    totalBalance: Number,
 });
-
 
 
 
