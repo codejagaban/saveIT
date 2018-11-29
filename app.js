@@ -2,11 +2,11 @@
 // GLOBAL CONFIG
 const  methodOverride = require("method-override");
 const bodyParser = require("body-parser");
-const Member = require("./models/member"),
-const Savings = require("./models/payment"),
-mongoose = require("mongoose"),
-express = require("express"),
-app = express();
+const Member = require("./models/member")
+const Savings = require("./models/payment");
+const mongoose = require("mongoose");
+const express = require("express");
+const app = express();
 
 // MONGOOSE CONFIG
 const DB_URL = process.env.DB_URL;
@@ -19,10 +19,10 @@ app.set("view engine", "ejs");
 
 
 // IMPORTS ALL THE NEEDED ROUTES
-var indexRoutes = require("./routes/indexRoute"),
-membersRoutes = require("./routes/membersRoutes");
-// loansRoutes = require("./routes/loansRoutes"),
-paymentRoute = require("./routes/paymentRoute"),
+const indexRoutes = require("./routes/indexRoute");
+const membersRoutes = require("./routes/membersRoutes");
+// loansRoutes = require("./routes/loansRoutes");
+const paymentRoute = require("./routes/paymentRoute");
 // searchRoutes = require("./routes/searchRoute");
 
 
