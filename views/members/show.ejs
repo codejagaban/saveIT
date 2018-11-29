@@ -91,6 +91,8 @@
 
                                     <tbody> 
                                     <%member.payments.forEach(function(payment){%>
+                                    
+                                  
                                     <tr>  
                                     <td><%=payment.amount%></td>
                                             <td><%=payment.date.toDateString()%> </td>
@@ -98,10 +100,7 @@
                                             
                                             <td><%=payment.depositType%></td>
 
-                                            <td>
-                                      
-                                         
-                                            </td>
+                                            <td><%=payment.totalBalance%></td>
                                           
                                            
                                         </tr>

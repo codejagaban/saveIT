@@ -26,41 +26,43 @@ router.post("/", function(req, res){
             
             
         } else {
-            Payments.create(req.body.payment, function(err, payment){
+            
+                    // 1. get the payment Object model
+
+            Payments.create(req.body.payment, async function(err, payment){
                 if (err) {
                     console.log(err);
                     
                     
                 } else {
+                    
+
+                    // 2.store the payment amount in current amoun
+                    var currentBalance = await Payments.findOne({}, 'totalBalance').sort('-created_at');
+                    console.log(currentBalance.totalBalance);
+                    
+                    // 3 store the currentAmount and the amount and pass it to the totalBalance
+                     payment.totalBalance = 200;
+
+                    // 4.Save to DB
                     payment.save();
+                    
+                
+                    // console.log(payment);
                     member.payments.push(payment);
                     member.save();
-                    // console.log(totalBalance());
-                    
+
+
                     res.redirect("" + member._id);
-
-                                        // Get the payment from user, sum it  and return it to as the totalBalance
-                    //  function totalBalance(){
-                    //     var balance = 0 + req.body.payment;
-                    //     balance = parseInt(req.body.payment.amount += balance);
-                    //     return balance
-
-                    // };      
-                    
-                    
-                                    }
+                }
 
             });
             
         }
     });
 });
-// Payments.aggregate({
-//     $payment: {
-//         totalBalance:
 
-//     }
-// })
+
 
 
 
