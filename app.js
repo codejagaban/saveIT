@@ -13,10 +13,9 @@ const passport = require("passport");
 const app = express();
 
 // MONGOOSE CONFIG
-// const DB_URL = process.env.DB_URL;
+const DB_URL = process.env.DB_URL;
 app.use(bodyParser.urlencoded({extended: true}));
-// mongoose.connect(DB_URL);
-mongoose.connect("mongodb://localhost/saveIT");
+mongoose.connect(DB_URL);
 app.use(methodOverride("_method"));
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
