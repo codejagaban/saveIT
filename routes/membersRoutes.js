@@ -18,7 +18,7 @@ router.get("/members",middleware.isLoggedIn, function(req, res){
 
     
 });
-
+        
 // GOES THE NEW MEMBER FORM
 router.get("/members/new",middleware.isLoggedIn, function(req, res){
     res.render("members/new");
