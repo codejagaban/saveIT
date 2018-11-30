@@ -9,6 +9,11 @@ body {
     width: 80%;
     float: right;
 }
+.welcome {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
 .m-aside-left.m-aside-left--skin-dark {
     height: 100vh;
 }
