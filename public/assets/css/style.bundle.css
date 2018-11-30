@@ -76,7 +76,7 @@ $table-inverse-color:           $body-bg !default;
 
 
 html {
-  font-family:'niramit';
+  font-family:'google sans';
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -91,7 +91,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: 'niramit' ;
+  font-family: 'google sans' ;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -3732,7 +3732,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: 'niramit';
+  font-family: 'google sans';
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -3817,7 +3817,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "niramit";
+  font-family: "google sans";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -12199,7 +12199,7 @@ code {
   background: #ffffff; }
 
 .btn {
-  font-family: 'niramit' ;
+  font-family: 'google sans' ;
   -webkit-box-shadow: none !important ;
   -moz-box-shadow: none !important ;
   box-shadow: none !important ;
@@ -12240,7 +12240,7 @@ code {
     padding: 0.75rem 2rem;
     font-size: 1rem;
     font-weight: 400;
-    font-family: 'niramit' , sans-serif;
+    font-family: 'google sans' , sans-serif;
     background-color: #384E77 !important; }
     .btn.m-btn--custom.btn-sm, .btn-group-sm > .btn.m-btn--custom {
       padding: 0.5rem 1rem;
@@ -25562,7 +25562,7 @@ body.m-portlet--fullscreen {
   padding: 0;
   min-width: 125px;
   font-size: 1rem;
-  font-family: 'niramit' ;
+  font-family: 'google sans' ;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -29407,7 +29407,12 @@ select.m-select2 {
     color: #6f727d; }
 
 .m-login.m-login--1 {
-  background: white; }
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../images/nat-10.jpg);
+    background-size:cover;
+    height: 100vh;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2); }
   .m-login.m-login--1 .m-login__aside {
     width: 700px;
     padding: 2rem 8rem; }
@@ -29417,13 +29422,10 @@ select.m-select2 {
       padding: 5rem 10rem 10rem 10rem;
       background-attachment: fixed;
       background-size: cover;
+      display:none;
   }
     
-  /* .m-login.m-login--1 .m-login__content {
-    background: linear-gradient(to right bottom, rgba(48, 131, 170,0.8),rgba(48, 131, 170,0.8)), url(images/header-bg-img.jpg);
-   background-repeat:no-repeat;
-    background-position:center;
-    background-size: cover; } */
+ 
     .m-login.m-login--1 .m-login__content .m-login__welcome {
       color: #ffffff;
       font-size: 3.5rem;
@@ -29435,10 +29437,11 @@ select.m-select2 {
       font-weight: 200; }
   .m-login.m-login--1 .m-login__wrapper {
     overflow: hidden;
-    padding: 30% 2rem 2rem 2rem; }
+    /* padding: 30% 2rem 2rem 2rem;  */
+  }
     .m-login.m-login--1 .m-login__wrapper .m-login__logo {
       text-align: center;
-      margin: 0 auto 4rem auto; }
+      margin: 0 auto 0rem auto; }
     .m-login.m-login--1 .m-login__wrapper .m-login__head {
       margin-top: 1rem; }
       .m-login.m-login--1 .m-login__wrapper .m-login__head .m-login__title {
@@ -29534,7 +29537,7 @@ select.m-select2 {
 
 .m-login.m-login--1.m-login--forget-password .m-login__forget-password {
   display: block; }
-
+/* 
 @media (min-width: 993px) and (max-width: 1200px) {
   .m-login.m-login--1 .m-login__aside {
     width: 600px;
@@ -29543,7 +29546,8 @@ select.m-select2 {
   .m-login.m-login--1 .m-login__content {
     padding: 2rem; }
     .m-login.m-login--1 .m-login__content .m-login__welcome {
-      font-size: 1.5rem; } }
+      font-size: 1.5rem; 
+    } }
 
 @media (max-width: 992px) {
   .m-login.m-login--1 .m-login__aside {
@@ -29701,7 +29705,7 @@ select.m-select2 {
 @media (max-width: 768px) {
   .m-login.m-login--2 .m-login__wrapper .m-login__container .m-login__form .m-login__form-sub {
     padding-left: 0;
-    padding-right: 0; } }
+    padding-right: 0; } } */
 
 .m-login.m-login--2.m-login-2--skin-1 .m-login__container .m-login__head .m-login__title {
   color: #f9f5ff; }
