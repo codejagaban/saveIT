@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const middleware = require("../middlewares/middleware");
 const Member = require("../models/member");
+const Payments = require("../models/payment");
 
 // GET ALL THE MEMBERS FROM THE DB AND SHOW ON THE BROWSER
 router.get("/members",middleware.isLoggedIn, function(req, res){
@@ -32,12 +33,27 @@ router.post("/members",middleware.isLoggedIn, function( req, res ){
             
             
         } else {
+            Payments.create(req.body.payment, function(err, payment){
+                if (err) {
+                    console.log(err);
+                    
+                    
+                } else {
+                
+                  
+                    payment.save();
+                
+                    // console.log(payment);
+                    member.payments.push(payment);
+                  
             res.redirect("members/");
             console.log(member);
             
 
             
         }
+    });
+};
     });
 });
 

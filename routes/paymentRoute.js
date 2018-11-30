@@ -27,19 +27,25 @@ router.post("/members/:id", middleware.isLoggedIn, function(req, res){
             
             
         } else {
+
+
+            // 1.GET THE LAST totalBalance FROM THE DB AND STORE TO balance
+          
+            
            
 
-            
-             // 1.GET THE LAST totalBalance FROM THE DB AND STORE TO balance
-             let balance = await Payments.findOne({}).sort({ date: -1 });
+           
+            // 1.GET THE LAST totalBalance FROM THE DB AND STORE TO balance
+            let balance = await Payments.findOne({}).sort({ date: -1 });
 
-             if (balance === null) {
-               balance = 0;
-             }
-             
-      
-            console.log(balance.totalBalance);
-            
+            if (balance === null) {
+              balance = 0;
+;
+            };
+
+
+
+
 
             Payments.create(req.body.payment, function(err, payment){
                 if (err) {
@@ -47,17 +53,17 @@ router.post("/members/:id", middleware.isLoggedIn, function(req, res){
                     
                     
                 } else {
+
+                    payment.totalBalance = Number(req.body.payment.amount)  + balance.totalBalance;
+                
+                    // 4.Save to DB
+                    console.log(typeof(balance.totalBalance));
+                    
+                    console.log(typeof(req.body.payment.amount));
                     console.log(typeof(payment.amount));
                     
-                    console.log(typeof(payment.totalBalance));
                     
-                 
-                     
-                    payment.totalBalance = balance.totalBalance + payment.amount;
-
-                    // 4.Save to DB
                     payment.save();
-                    
                 
                     // console.log(payment);
                     member.payments.push(payment);
