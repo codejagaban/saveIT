@@ -7,6 +7,7 @@ const LocalStrategy = require("passport-local");
 const passport = require("passport");
 const Member = require("./models/member");
 const Savings = require("./models/payment");
+const Loans = require("./models/loans");
 const User = require("./models/user");
 const flash = require("connect-flash");
 const mongoose = require("mongoose");

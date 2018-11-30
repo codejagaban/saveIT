@@ -3,13 +3,13 @@
 All the typography for The pages imported from the fonts folder */
 
 @font-face {
-    font-family: "gt walsheim";
-    src: url('../../fonts/gt_walsheim/gt-walsheim-regular.ttf') format('truetype');
+    font-family: "google sans";
+    src: url('../../fonts/GoogleSans-Regular.ttf') format('truetype');
     font-weight: normal;
 }
 @font-face {
-    font-family: "nat";
-    src: url('../../fonts/sf-fonts/Nunito-Regular.ttf') format('truetype');
+    font-family: "google sans";
+    src: url('../../fonts/GoogleSans-Regular.ttf') format('truetype');
     font-weight: normal;
 }
 
@@ -17,18 +17,18 @@ All the typography for The pages imported from the fonts folder */
 
 
 body {
-    font-family:'nat', sans-serif;
+    font-family:'google sans', sans-serif;
     font-weight: 300;   
     line-height: 1.7;
     color: #777373; 
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'gt walsheim' , sans-serif;
+    font-family: 'google sans' , sans-serif;
 }
 
 p {
-    font-family: 'nat', sans-serif;
+    font-family: 'google sans', sans-serif;
     line-height: 3rem;
     font-size: 1.8rem;
 }
@@ -37,14 +37,14 @@ a {
     text-decoration: none;
     text-transform: capitalize;
     font-size: 1.8rem;
-    font-family: 'nat', sans-serif;
+    font-family: 'google sans', sans-serif;
 }
 a:hover {
     text-decoration: none;
 }
 
 .list-header, .header-benefit{
-    font-family: 'gt walsheim', sans-serif;
+    font-family: 'google sans', sans-serif;
     color: #3d3d3d;
     font-size: 2rem;
 }
@@ -65,7 +65,7 @@ a:hover {
     color:#ffffff;
     text-align: center;
     font-size: 3rem;
-    font-family:'nat', sans-serif;
+    font-family:'google sans', sans-serif;
     margin-bottom: 3rem;
     line-height: 7rem;
 }
