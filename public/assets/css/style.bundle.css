@@ -75,6 +75,22 @@ $table-inverse-color:           $body-bg !default;
   box-sizing: border-box; }
 
 
+/* ---------
+All the typography for The pages imported from the fonts folder */
+
+@font-face {
+  font-family: "google sans";
+  src: url('../../fonts/GoogleSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: "google sans";
+  src: url('../../fonts/GoogleSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+/* resets the webpage */
+
 html {
   font-family:'google sans';
   line-height: 1.15;
