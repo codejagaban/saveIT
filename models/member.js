@@ -7,6 +7,7 @@ var memberSchema = new mongoose.Schema({
     dateOfBirth: String,
     email:String,
     occupation: String,
+    gender: String,
     dateJoined: {type: Date, default: Date.now},
 
     payments: [

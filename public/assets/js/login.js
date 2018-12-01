@@ -71,12 +71,11 @@ var SnippetLogin = function() {
 
             form.validate({
                 rules: {
-                    email: {
+                    username: {
                         required: true,
-                        email: true
                     },
                     password: {
-                        required: true
+                        required: true,
                     }
                 }
             });
@@ -94,7 +93,7 @@ var SnippetLogin = function() {
                 	setTimeout(function() {
 	                    btn.removeClass('m-loader m-loader--right m-loader--light').attr('disabled', false);
 	                    showErrorMsg(form, 'danger', 'Incorrect username or password. Please try again.');
-                    }, 2000);
+                    }, 5000);
                 }
             });
         });
@@ -109,7 +108,7 @@ var SnippetLogin = function() {
 
             form.validate({
                 rules: {
-                    fullname: {
+                    username: {
                         required: true
                     },
                     email: {
@@ -149,8 +148,8 @@ var SnippetLogin = function() {
 	                    signInForm.clearForm();
 	                    signInForm.validate().resetForm();
 
-	                    showErrorMsg(signInForm, 'success', 'Thank you. To complete your registration please check your email.');
-	                }, 2000);
+	                    showErrorMsg(signInForm, 'success', 'Thank you. You can now Log in.');
+	                }, 100);
                 }
             });
         });
@@ -194,7 +193,7 @@ var SnippetLogin = function() {
 	                    signInForm.validate().resetForm();
 
 	                    showErrorMsg(signInForm, 'success', 'Cool! Password recovery instruction has been sent to your email.');
-                	}, 2000);
+                	}, 400);
                 }
             });
         });

@@ -39,7 +39,6 @@
                                 <div class="m-portlet__body">
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="profile" role="tabpanel">
-                                        <a href="/members/<%=member._id%>/edit" class="btn btn-outline-primary float-right">Edit Profile</a>
 
                                         <div class="row">
                                         <div class="col-md-5">
@@ -47,7 +46,7 @@
                                         <h6 class="bg-info p-2 text-white">Basic Info</h6>
                                         <p><h6 class="inline">Fullname: </h6><%=member.firstName + " " + member.lastName%></p>
                                         
-                                        <p><h6 class="inline">Date Of Birth: </h6><%=member.dateOfBirth%></p>
+                                        <p><h6 class="inline">Date Of Birth: </h6><%=member.dateOfBirth%>, <h6 class="inline">Gender: </h6><%=member.gender%></p>
                                         
                                         <p><h6 class="inline">Occupation : </h6><%=member.occupation%></p>
 
@@ -90,7 +89,7 @@
 
 
                                     <tbody> 
-                                    <%member.payments.forEach(function(payment){%>
+                                    <%member.payments.reverse().forEach(function(payment){%>
                                     
                                   
                                     <tr>  
