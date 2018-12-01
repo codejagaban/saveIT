@@ -11676,7 +11676,7 @@ b, strong {
   .m-tabs-line.m-tabs-line--info.nav.nav-tabs .nav-link:hover, .m-tabs-line.m-tabs-line--info.nav.nav-tabs .nav-link.active,
   .m-tabs-line.m-tabs-line--info a.m-tabs__link:hover,
   .m-tabs-line.m-tabs-line--info a.m-tabs__link.active {
-    color: #2C2E3E
+    color: #2C2E3E;
     border-bottom: 1px solid #2C2E3E }
     .m-tabs-line.m-tabs-line--info.nav.nav-tabs .nav-link:hover > i, .m-tabs-line.m-tabs-line--info.nav.nav-tabs .nav-link.active > i,
     .m-tabs-line.m-tabs-line--info a.m-tabs__link:hover > i,
@@ -11822,7 +11822,7 @@ b, strong {
   .m-tabs-line.m-tabs-line--skin-dark.m-tabs-line--info.nav.nav-tabs .nav-link:hover, .m-tabs-line.m-tabs-line--skin-dark.m-tabs-line--info.nav.nav-tabs .nav-link.active,
   .m-tabs-line.m-tabs-line--skin-dark.m-tabs-line--info a.m-tabs__link:hover,
   .m-tabs-line.m-tabs-line--skin-dark.m-tabs-line--info a.m-tabs__link.active {
-    color: #2C2E3E
+    color: #2C2E3E;
     border-bottom: 1px solid #2C2E3E }
     .m-tabs-line.m-tabs-line--skin-dark.m-tabs-line--info.nav.nav-tabs .nav-link:hover > i, .m-tabs-line.m-tabs-line--skin-dark.m-tabs-line--info.nav.nav-tabs .nav-link.active > i,
     .m-tabs-line.m-tabs-line--skin-dark.m-tabs-line--info a.m-tabs__link:hover > i,
@@ -11932,7 +11932,7 @@ b, strong {
   color: #ffffff; }
 
 .m-badge.m-badge--info {
-  background-color: #2C2E3E
+  background-color: #2C2E3E;
   color: #ffffff; }
 
 .m-badge.m-badge--warning {
@@ -29418,6 +29418,28 @@ select.m-select2 {
     padding: 2rem 8rem; }
 
 
+
+    @media (max-width: 993px) {
+      .m-login.m-login--1 {
+          background-image: url(../images/nat-10.jpg);
+            background-size:cover;
+            height: 100vh;
+            border-radius: 3px;
+            background-repeat: no-repeat;
+            box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2); }
+          .m-login.m-login--1 .m-login__aside {
+            width: 700px;
+            padding: 2rem 8rem; }
+  
+  }
+
+  
+
+  
+
+
+
+
     .m-login.m-login--1 .m-login__content {
       padding: 5rem 10rem 10rem 10rem;
       background-attachment: fixed;
@@ -29537,7 +29559,6 @@ select.m-select2 {
 
 .m-login.m-login--1.m-login--forget-password .m-login__forget-password {
   display: block; }
-/* 
 @media (min-width: 993px) and (max-width: 1200px) {
   .m-login.m-login--1 .m-login__aside {
     width: 600px;
@@ -29553,6 +29574,7 @@ select.m-select2 {
   .m-login.m-login--1 .m-login__aside {
     width: 500px;
     margin: 0 auto;
+    color: #ffffff !important;
     padding: 2rem 3rem; }
     .m-login.m-login--1 .m-login__aside .m-login__wrapper {
       padding-top: 3rem; }
@@ -29616,9 +29638,11 @@ select.m-select2 {
         .m-login.m-login--2 .m-login__wrapper .m-login__container .m-login__form .m-login__form-sub {
           padding-left: 7px;
           padding-right: 7px;
+          color:#fff;
           margin: 15px auto; }
           .m-login.m-login--2 .m-login__wrapper .m-login__container .m-login__form .m-login__form-sub .m-checkbox {
-            font-size: 1rem; }
+            font-size: 1rem;
+            color:#fff; }
           .m-login.m-login--2 .m-login__wrapper .m-login__container .m-login__form .m-login__form-sub .m-link {
             font-size: 1rem; }
         .m-login.m-login--2 .m-login__wrapper .m-login__container .m-login__form .m-login__form-action {
@@ -29705,7 +29729,8 @@ select.m-select2 {
 @media (max-width: 768px) {
   .m-login.m-login--2 .m-login__wrapper .m-login__container .m-login__form .m-login__form-sub {
     padding-left: 0;
-    padding-right: 0; } } */
+    color:#fff;
+    padding-right: 0; } } 
 
 .m-login.m-login--2.m-login-2--skin-1 .m-login__container .m-login__head .m-login__title {
   color: #f9f5ff; }
