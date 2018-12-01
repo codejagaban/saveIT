@@ -96,6 +96,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  height:100%;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent; }
 
@@ -29426,6 +29427,8 @@ select.m-select2 {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../images/nat-10.jpg);
     background-size:cover;
     height: 100vh;
+    
+    background-position: fixed;
     border-radius: 3px;
     background-repeat: no-repeat;
     box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2); }
@@ -29439,7 +29442,9 @@ select.m-select2 {
       .m-login.m-login--1 {
           background-image: url(../images/nat-10.jpg);
             background-size:cover;
-            height: 100vh;
+            height: 100%;
+            
+    background-position: fixed;
             border-radius: 3px;
             background-repeat: no-repeat;
             box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2); }
