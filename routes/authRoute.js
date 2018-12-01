@@ -9,7 +9,7 @@ router =express.Router();
 
 // LANDS YOU ON THE LANDING PAGE
 router.get("/", function(req, res){
-    res.render("landing")
+    res.render("login")
 });
 
 
