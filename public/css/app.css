@@ -1,6 +1,4 @@
-body {
-   
-}
+
 .centered {
     margin: 0 auto;
 }
@@ -14,6 +12,29 @@ body {
     margin: 0 auto;
     text-align: center;
 }
+
+@media (max-width: 993px) {
+    .m-portlet.m-portlet--tab, .topheader  {
+        width: 100%;
+        float: none;
+
+    }
+    .m-login.m-login--1 {
+        background-image: url(../images/nat-10.jpg);
+          background-size:cover;
+          height: 100vh;
+          border-radius: 3px;
+          background-repeat: no-repeat;
+          box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2); }
+        .m-login.m-login--1 .m-login__aside {
+          width: 700px;
+          padding: 2rem 8rem; }
+
+}
+
+
+
+
 .m-aside-left.m-aside-left--skin-dark {
     height: 100vh;
 }
