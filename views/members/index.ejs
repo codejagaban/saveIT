@@ -28,10 +28,10 @@
                         <div class="m-portlet__body">
                             <!--begin::Section-->
                             <div class="m-section">
-                                <div class="m-section__content">
+                                <div class="m-section__content table-responsive">
                                 
                                 <a href="/members/new" class="btn btn-primary float-right">Add a new member</a>
-                                    <table class="table table-striped m-table  table-responsive">
+                                    <table class="table table-striped m-table  ">
                                         <thead>
                                             <tr>
                                                 <th> # </th>
@@ -49,7 +49,7 @@
                                         
                                         <% members.forEach(function(member){%>
                                         <tr>  
-             <th scope="row" ><span class="bg-primary text-white round text-center"></span><%=member.firstName%></th>
+             <th scope="row" ><span class="bg-primary text-white round text-center"></span><%=member.length%></th>
                                                 <td><%= member.firstName + " " + member.lastName%></td>
                                                 <td><%= member.dateJoined.toDateString()%> </td>
                                                 <td><%= member.address%></td>
