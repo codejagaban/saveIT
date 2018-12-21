@@ -6,6 +6,13 @@ const UserSchema = new mongoose.Schema({
     email: String,
     phoneNum : String,
     password: String,
+
+    member: [
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref: "Members"
+        }
+    ]
     
 });
 

@@ -44,7 +44,8 @@
                                         <div class="col-md-5">
                                         
                                         <h6 class="bg-info p-2 text-white">Basic Info</h6>
-                                        <p><h6 class="inline">Fullname: </h6><%=member.firstName + " " + member.lastName%></p>
+                                        <p><h6 class="inline">Fullname: </h6><%=member.firstName + " " + member.lastName%>
+                                        <span class="text-muted"></span></p>
                                         
                                         <p><h6 class="inline">Date Of Birth: </h6><%=member.dateOfBirth%>, <h6 class="inline">Gender: </h6><%=member.gender%></p>
                                         
@@ -71,9 +72,9 @@
 
                                        
                                         </div>
-                                        <div class="tab-pane" id="savings" role="tabpanel">
+                                        <div class="tab-pane table-responsive" id="savings" role="tabpanel">
                                            
-                                <a href="/members/<%=member._id%>/payments/new" class="btn btn-outline-primary float-right">Add a new Saving</a>
+                                <a href="/members/<%=member._id%>/savings/new" class="btn btn-outline-primary float-right">Add a new Saving</a>
                                 <table class="table table-striped m-table">
                                     <thead>
                                         <tr>
@@ -89,17 +90,17 @@
 
 
                                     <tbody> 
-                                    <%member.payments.reverse().forEach(function(payment){%>
+                                    <%member.savings.reverse().forEach(function(saving){%>
                                     
                                   
                                     <tr>  
-                                    <td><%=payment.amount%></td>
-                                            <td><%=payment.date.toDateString()%> </td>
+                                    <td><%=saving.amount%></td>
+                                            <td><%=saving.date.toDateString()%> </td>
 
                                             
-                                            <td><%=payment.depositType%></td>
+                                            <td><%=saving.depositType%></td>
 
-                                            <td><%=payment.totalBalance%></td>
+                                            <td><%=saving.totalBalance%></td>
                                           
                                            
                                         </tr>
@@ -108,10 +109,74 @@
                                     
                                     </tbody>
                                 </table> </div>
-                                        <div class="tab-pane" id="loans" role="tabpanel">
-                                      
+                                        <div class="tab-pane table-responsive" id="loans" role="tabpanel" >
+                                        <div class="btn btn-outline-danger "> Loan Amount 250,000</div>
+                                        
+                                        <a href="/members/<%=member._id%>/loan-payments/new" class="btn btn-outline-primary float-right">Add a new Loan Payment</a>
+                                
+                                        <table class="table table-striped m-table">
+                                    <thead>
+                                        <tr>
+                                        <th>Loan Amount</th>
+                                            <th>Date Granted </th>
+                                            <th>Duration</th>
+                                            <th>Interest Rate</th>
+                                            <th>Interest Amount</th>
+                                            <th>Due Date</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                            
+                                           
+                                        </tr>
 
 
+                                    </thead>
+
+
+                                    <tbody> 
+                                    
+                                  
+                                    <tr>
+                                    <td>100,000</td>
+                                    <td></td>
+                                    <td>6 months</td>
+                                    <td>10%</td>
+                                    <td>10,000</td>
+                                    <td></td>
+                                    <td><span class="bg-success font-italic p-1 text-white status rounded">completed</span></td>
+                                    <td>
+                                    <div class="dropdown show">
+                                    <a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="icon flaticon-more-v2"></span>
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                      <a class="dropdown-item" href="#"><span class="ti ti-check m-r-10"></span>Mark As Completed</a>
+                                      <a class="dropdown-item" href="#ModalPay" data-toggle="modal"><span class="fa fa-money m-r-10"></span>Add Payment</a>
+                                      <a class="dropdown-item" href="#ModalView" data-toggle="modal"><span class="ti ti-eye  m-r-10" ></span>View Payments</a>
+                                    </div>
+                                  </div>
+                                    
+                                    </td>
+                                    
+                                    </tr>
+                                    
+                                    <tr>
+                                    <td>250,000</td>
+                                    <td></td>
+                                    <td>3 months</td>
+                                    <td>10%</td>
+                                    <td>25,000</td>
+                                    <td></td>
+                                    <td><span class="bg-danger font-italic p-1 text-white status rounded">declined</span></td>
+                                    <td><i class=" icon flaticon-more-v2"></i></td>
+                                    
+                                    </tr>
+                                  
+
+                                    
+                                    </tbody>
+                                </table> 
                                        </div>
                                     </div>
                                     
@@ -128,7 +193,150 @@
     </div>
     <!-- end:: Body -->
 
+<!-- Add Loan Payment Modal -->
+<div class="modal fade" id="ModalView" tabindex="-1" role="dialog" aria-labelledby="ModalLargeLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
 
+            <h2 class="card-title text-center text-white bg-primary p-10">Loan Payment</h2>
+        <div class="modal-body">
+            <div class="table-responsive">
+                <table class="table stylish-table table-striped">
+                       <thead>
+                           <tr>
+                                <th>Amount</th>
+                                <th>Mode Of Payment</th>
+                                <th>Reference Number</th>
+                                <th>Balance</th>
+                                <th>Date</th>
+
+                           </tr>
+
+                       </thead>
+
+                       <tbody>
+                           <tr>
+                               <td><i class="fa fa-ngn"></i>50,000</td>
+                               <td>Cash</td>
+                               <td>782389093abbd</td>
+                               <td><i class="fa fa-ngn"></i>200,000</td>
+                               <td>2-11-2018</td>
+                           </tr>
+
+                           <tr>
+                                <td><i class="fa fa-ngn"></i>60,000</td>
+                                <td>Cash</td>
+                                <td>782389093abbd</td>
+                                <td> <i class="fa fa-ngn"></i> 140,000</td>
+                                <td>2-11-2018</td>
+                            </tr>
+
+
+                            <tr>
+                                <td><i class="fa fa-ngn"></i>80,000</td>
+                                <td>Cash</td>
+                                <td>72378389bb</td>
+                                <td><i class="fa fa-ngn"></i> 60,000</td>
+                                <td>2-11-2018</td>
+
+                            </tr>
+
+
+
+                    </tbody>
+                </table>
+
+            </div>
+
+                                </div>
+
+    <div class="modal-footer left">
+        <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="fa fa-close p-r-20 p-1"></i> Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+            </div>
+            </div>
+
+
+
+            
+                    <!-- Payment Modal -->
+                    <div class="modal fade" id="ModalPay" tabindex="-1" role="dialog" aria-labelledby="ModalLargeLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="form">
+                            <div class="modal-content">
+
+                                    <h2 class="card-title text-center text-white bg-primary p-10">Add Loan Payment</h2>
+                                <div class="modal-body">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <form action="" class="form-material">
+
+                                              <div class="row">
+                                                  <div class="col-md-6">
+                                                      <div class="form-group">
+                                                      <label for="">Amount</label>
+                                                      <div class="col-sm-12 p-l-0">
+                                                          <div class="input-group">
+                                                              <div class="input-group-addon"><i class="fa fa-ngn"></i></div>
+                                                              <input type="text" class="form-control">
+                                                          </div>
+                                                      </div>
+
+
+                                                          </div>
+                                                      </div>
+
+
+                                                  <div class="col-md-6">
+                                                      <label for="">Mode Of Payment</label>
+
+                                                      <select name="" id="" class="form-control">
+                                                          <option value="1">Bank Deposit</option>
+                                                          <option value="2">Cash</option>
+                                                          <option value="3">Transfer</option>
+                                                      </select>
+                                                  </div>
+                                                  </div>
+                                                  <div class="row">
+                                                      <div class="col-md-6">
+                                                          <div class="form-group">
+                                                              <label for="">Reference Number</label>
+                                                              <input type="text" class="form-control">
+
+
+                                                          </div>
+
+                                                      </div>
+                                                      <div class="col-md-6">
+                                                          <label for="">Date</label>
+                                                          <input type="date" name="" id="" class="form-control">
+                                                      </div>
+                                                  </div>
+
+
+                                          </form>
+                                      </div>
+                                  </div>
+
+                                                        </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" type="submit" ><i class="fa fa-save p-r-20 p-1"></i>Add Payment</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close p-r-20 p-1"></i>Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        
 
 
 

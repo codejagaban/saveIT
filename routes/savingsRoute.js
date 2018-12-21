@@ -1,11 +1,11 @@
 const express = require("express");
 const Member = require("../models/member");
-const Payments = require("../models/payment");
+const Savings = require("../models/savings");
 const middleware = require("../middlewares/middleware");
 const router = express.Router({mergeParams: true});
 
 
-router.get("/members/:id/payments/new", middleware.isLoggedIn, function(req, res){
+router.get("/members/:id/savings/new", middleware.isLoggedIn, function(req, res){
 
     Member.findById(req.params.id, function(err, member){
         if (err) {
@@ -13,7 +13,7 @@ router.get("/members/:id/payments/new", middleware.isLoggedIn, function(req, res
             
             
         } else {
-            res.render("payments/new", {member: member});
+            res.render("savings/new", {member: member});
             
         }
     });
@@ -36,7 +36,7 @@ router.post("/members/:id", middleware.isLoggedIn, function(req, res){
 
            
             // 1.GET THE LAST totalBalance FROM THE DB AND STORE TO balance
-            let balance = await Payments.findOne({}).sort({ date: -1 });
+            let balance = await Savings.findOne({}).sort({ date: -1 });
 
             if (balance === null) {
               balance = 0;
@@ -47,26 +47,26 @@ router.post("/members/:id", middleware.isLoggedIn, function(req, res){
 
 
 
-            Payments.create(req.body.payment, function(err, payment){
+            Savings.create(req.body.saving, function(err, saving){
                 if (err) {
                     console.log(err);
                     
                     
                 } else {
 
-                    payment.totalBalance = Number(req.body.payment.amount)  + balance.totalBalance;
+                    saving.totalBalance = Number(req.body.saving.amount)  + balance.totalBalance;
                 
                     // 4.Save to DB
                     console.log(typeof(balance.totalBalance));
                     
-                    console.log(typeof(req.body.payment.amount));
-                    console.log(typeof(payment.amount));
+                    console.log(typeof(req.body.saving.amount));
+                    console.log(typeof(saving.amount));
                     
                     
-                    payment.save();
+                    saving.save();
                 
-                    // console.log(payment);
-                    member.payments.push(payment);
+                    // console.log(saving);
+                    member.savings.push(saving);
                     member.save();
 
 

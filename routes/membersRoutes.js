@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const middleware = require("../middlewares/middleware");
 const Member = require("../models/member");
-const Payments = require("../models/payment");
+const Savings = require("../models/savings");
 
 // GET ALL THE MEMBERS FROM THE DB AND SHOW ON THE BROWSER
 router.get("/members",middleware.isLoggedIn, function(req, res){
@@ -33,7 +33,7 @@ router.post("/members",middleware.isLoggedIn, function( req, res ){
             
             
         } else {
-            Payments.create(req.body.payment, function(err, payment){
+            Savings.create(req.body.saving, function(err, saving){
                 if (err) {
                     console.log(err);
                     
@@ -41,10 +41,10 @@ router.post("/members",middleware.isLoggedIn, function( req, res ){
                 } else {
                 
                   
-                    payment.save();
+                    saving.save();
                 
                     // console.log(payment);
-                    member.payments.push(payment);
+                    member.savings.push(payment);
                   
             res.redirect("members/");
             console.log(member);
