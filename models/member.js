@@ -10,10 +10,10 @@ var memberSchema = new mongoose.Schema({
     gender: String,
     dateJoined: {type: Date, default: Date.now},
 
-    payments: [
+    savings: [
         {
             type:mongoose.Schema.Types.ObjectId,
-            ref: "Payments"
+            ref: "Savings"
         }
     ]
 

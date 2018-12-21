@@ -34,8 +34,8 @@
                                     <table class="table table-striped m-table  ">
                                         <thead>
                                             <tr>
-                                                <th> # </th>
                                                 <th>Full Name</th>
+                                                <th></th>
                                                 <th> Date Joined </th>
                                                 <th> Address</th>
                                                 <th>Action</th>
@@ -48,12 +48,22 @@
                                         <tbody> 
                                         
                                         <% members.forEach(function(member){%>
-                                        <tr>  
-             <th scope="row" ><span class="bg-primary text-white round text-center"></span><%=member.length%></th>
-                                                <td><%= member.firstName + " " + member.lastName%></td>
+                                                <tr>  
+                                                <td colspan="2" ><span class="bg-info abbre text-white rounded-circle text-center mr-4">
+                                                <%=member.firstName.substring(0,1)%> <%=member.lastName.substring(0,1)%>
+                                                </span><%= member.firstName + " " + member.lastName%></td>
                                                 <td><%= member.dateJoined.toDateString()%> </td>
                                                 <td><%= member.address%></td>
-                                                <td> <a href="/members/<%=member._id%>">more info</a> </td>
+                                                <td><div class="dropdown show">
+                                                <a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class=" icon flaticon-more-v2"></i>
+                                                </a>
+                                              
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                  <a class="dropdown-item" href="/members/<%=member._id%>">View Profile</a>
+                                                 
+                                                </div>
+                                              </div> </td>
                                             </tr>
                                             <%});%>  
 
