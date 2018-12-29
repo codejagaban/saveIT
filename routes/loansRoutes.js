@@ -3,7 +3,7 @@ const router = express.Router();
 
 const Member = require("../models/member");
 const middleware = require("../middlewares/middleware");
-const Payments = require("../models/payment");
+const Loans = require("../models/loans");
 
 
 router.get("/members/:id/loan-payments/new", function(req, res){

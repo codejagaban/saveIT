@@ -44,7 +44,7 @@ router.post("/members",middleware.isLoggedIn, function( req, res ){
                     saving.save();
                 
                     // console.log(payment);
-                    member.savings.push(payment);
+                    member.savings.push(saving);
                   
             res.redirect("members/");
             console.log(member);
@@ -62,7 +62,7 @@ router.post("/members",middleware.isLoggedIn, function( req, res ){
 
 router.get("/members/:id",middleware.isLoggedIn, function(req, res){
 
-    Member.findById(req.params.id).populate("payments").exec(function(err, foundMember){
+    Member.findById(req.params.id).populate("savings").exec(function(err, foundMember){
         if(err) {
             console.log(err)
         } else {

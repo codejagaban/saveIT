@@ -1,5 +1,5 @@
-var mongoose = require("mongoose");
-var memberSchema = new mongoose.Schema({
+const mongoose = require("mongoose");
+const memberSchema = new mongoose.Schema({
     firstName: String,
     lastName: String,
     phoneNum: String,

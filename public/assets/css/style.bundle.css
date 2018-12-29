@@ -80,12 +80,12 @@ All the typography for The pages imported from the fonts folder */
 
 @font-face {
   font-family: "google sans";
-  src: url('../../fonts/GoogleSans-Regular.ttf') format('truetype');
+  src: url('../fonts/GoogleSans-Regular.ttf') format('truetype');
   font-weight: normal;
 }
 @font-face {
   font-family: "google sans";
-  src: url('../../fonts/GoogleSans-Regular.ttf') format('truetype');
+  src: url('../fonts/GoogleSans-Regular.ttf') format('truetype');
   font-weight: normal;
 }
 
