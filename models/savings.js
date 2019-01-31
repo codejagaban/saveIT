@@ -1,5 +1,5 @@
-var mongoose = require("mongoose");
-var savingsSchema = new mongoose.Schema({
+const mongoose = require("mongoose");
+const savingsSchema = new mongoose.Schema({
     amount:{type:Number, default: 0},
     depositType: String,
     date:{type: Date, default: Date.now},

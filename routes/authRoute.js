@@ -26,19 +26,19 @@ router.get("/register", function(req, res){
 // handle sign up logic
 
 router.post("/register", function(req, res){
-    var newUser = new User({username: req.body.username});
+    const newUser = new User({username: req.body.username});
     User.register(newUser, req.body.password, function(err, user){
         if (err) {
             req.flash("error",err.message);
             res.redirect("back");
             console.log(err.message);
-            
+
         } else {
             passport.authenticate("local")(req, res, function(){
                 req.flash("success", "Welcome to #saveIT " + user.username);
                 res.redirect("/members");
             });
-            
+
         }
     });
 });

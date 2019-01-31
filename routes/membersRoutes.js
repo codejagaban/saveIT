@@ -9,16 +9,16 @@ router.get("/members",middleware.isLoggedIn, function(req, res){
     Member.find({}, function(err, members){
         if (err) {
             console.log(err);
-            
-            
+
+
         } else {
             res.render("members/", {members : members} )
         }
     });
 
-    
+
 });
-        
+
 // GOES THE NEW MEMBER FORM
 router.get("/members/new",middleware.isLoggedIn, function(req, res){
     res.render("members/new");
@@ -30,27 +30,25 @@ router.post("/members",middleware.isLoggedIn, function( req, res ){
     Member.create(req.body.member, function(err, member ){
         if (err) {
             console.log(err);
-            
-            
+
+
         } else {
             Savings.create(req.body.saving, function(err, saving){
                 if (err) {
                     console.log(err);
-                    
-                    
+
+
                 } else {
-                
-                  
+
+                //   sets the initial value of savings
                     saving.save();
-                
-                    // console.log(payment);
                     member.savings.push(saving);
-                  
+
             res.redirect("members/");
             console.log(member);
-            
 
-            
+
+
         }
     });
 };
@@ -58,7 +56,7 @@ router.post("/members",middleware.isLoggedIn, function( req, res ){
 });
 
 
-// show more info about a member 
+// show more info about a member
 
 router.get("/members/:id",middleware.isLoggedIn, function(req, res){
 
@@ -67,9 +65,9 @@ router.get("/members/:id",middleware.isLoggedIn, function(req, res){
             console.log(err)
         } else {
             res.render("members/show", {member: foundMember});
-        }        
+        }
     });
-   
+
 });
 
 

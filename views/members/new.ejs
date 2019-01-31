@@ -6,7 +6,7 @@
 
             <div class="m-content">
                 <div class="row justify-content-center">
-                    
+
                 <div class="col-md-10">
                     <!--begin::Portlet-->
                     <div class="m-portlet m-portlet--tab">
@@ -25,39 +25,39 @@
                         <!--begin::Form-->
                         <form action="/members" method="POST" class="m-form m-form--fit m-form--label-align-right">
                             <div class="m-portlet__body" style="padding-top: 0px;">
-                                
-                                
+
+
                                 <div class="form-group m-form__group row">
-                                
+
                                     <div class="col-md-6">
-                                        <input class="form-control m-input--solid" placeholder="Firstname" autocomplete="off" type="text" name="member[firstName]">
-                                        <input class="form-control m-input--solid mt-3" placeholder="Lastname" autocomplete="off" type="text" name="member[lastName]">
-                                        <input type="text" class="form-control mt-3 m-input--solid" name="member[dateOfBirth]" autocomplete="off"  placeholder="Date Of Birth" id="m_datepicker_2"/>
-                                        <select class="form-control m-select2--solid m-input--solid mt-3 p-2" name="member[gender]">
-                        
+                                        <input class="form-control m-input--solid" required placeholder="Firstname" autocomplete="off" type="text" name="member[firstName]">
+                                        <input class="form-control m-input--solid mt-3" required placeholder="Lastname" autocomplete="off" type="text" name="member[lastName]">
+                                        <input type="text" class="form-control mt-3 m-input--solid" required name="member[dateOfBirth]" autocomplete="off"  placeholder="Date Of Birth" id="m_datepicker_2"/>
+                                        <select class="form-control m-select2--solid m-input--solid mt-3 p-2" required name="member[gender]">
+
                                         <option value="none">Select Gender</option>
                                         <option>Male</option>
                                         <option>Female</option>
-                                       
-                                            
+
+
                                         </select>
-                                        
-                                
+
+
                                     </div>
 
                                     <div class="col-md-6">
-                                    <input class="form-control m-input--solid" placeholder="Address" type="text" autocomplete="off" name="member[address]">
-                                    <input class="form-control m-input--solid mt-3" placeholder="Email Address" autocomplete="off" type="email" name="member[email]">
-                                    <input class="form-control m-input--solid mt-3" placeholder="Occupation" autocomplete="off" type="text" name="member[occupation]">
-                                    <input class="form-control m-input--solid mt-3" min="0" placeholder="Phone Number" autocomplete="off" type="text" name="member[phoneNum]">
-                               
-                               
+                                    <input class="form-control m-input--solid" required placeholder="Address" type="text" autocomplete="off" name="member[address]">
+                                    <input class="form-control m-input--solid mt-3" required placeholder="Email Address" autocomplete="off" type="email" name="member[email]">
+                                    <input class="form-control m-input--solid mt-3" required placeholder="Occupation" autocomplete="off" type="text" name="member[occupation]">
+                                    <input class="form-control m-input--solid mt-3" required min="0" placeholder="Phone Number" autocomplete="off" type="text" name="member[phoneNum]">
+
+
                                    </div>
                                 </div>
 
 
-                                
-                                      
+
+
 
                         <div class="m-portlet__foot m-portlet__foot--fit text-center">
                         <div class="m-form__actions row justify-content-center">
@@ -65,17 +65,17 @@
                         <button type="submit" class="btn mt-2 mb-3 btn-block btn-primary">
                         Submit
                     </button>
-                            
-                       
+
+
                     <a href="/members">Go back</a>
-                            
+
                         </div>
-                    
-                          
+
+
                         </div>
                     </div>
                             </div>
-                         
+
                         </form>
                         <!--end::Form-->
                     </div>
